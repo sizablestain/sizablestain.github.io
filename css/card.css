@@ -1,0 +1,65 @@
+#maincard, .card {
+	background-color: #333333;
+	color: #ffffff;
+	width: 100%;
+	border: none;
+	margin: 0;
+	border-radius: 0;
+}
+
+.cardContainer {
+	margin-bottom: 16px;
+}
+
+#mainCardImg {
+	margin-left: -15px;
+	width: calc(100% + 15px);
+}
+
+.cardImg {
+	width: 100%;
+}
+
+.cardH {
+	margin-top: 16px;
+}
+
+.cardText {
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-bottom: 16px;
+}
+
+#viewAllRow {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#viewAllButton {
+    text-decoration: none;
+	padding-left: 64px;
+	padding-right: 64px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	background-color: #ffffff;
+	color: #333333;
+	border: 1px solid #333333;
+	border-radius: 0;
+}
+
+#viewAllButton:hover {
+	color: #ffffff;
+	background-color: #333333;
+	cursor: pointer;
+}
+
+.postLink {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.postLink:hover, .postLink:active {
+	color: #ffffff;
+	text-decoration: underline;
+}

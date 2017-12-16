@@ -1,0 +1,26 @@
+#mc_embed_signup {
+	display: inline-block;
+	background-color: #333333;
+}
+
+#mce-EMAIL {
+	border: 1px solid #ffffff !important;
+	border-radius: 0 !important;
+	width: 180px !important;
+	margin-right: 8px !important;
+}
+
+#mc-embedded-subscribe {
+	background-color: #333333 !important;
+	border: 1px solid #ffffff !important;
+	color: #ffffff !important;
+	border-radius: 0 !important;
+	width: 80px !important;
+	padding-left: 8px !important;
+	padding-right: 8px !important;
+}
+
+#mc-embedded-subscribe:hover {
+	background-color: #ffffff !important;
+	color: #333333 !important;
+}

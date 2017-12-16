@@ -1,52 +1,38 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111280464-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'UA-111280464-1');
-        </script>
-        <meta charset="utf-8">
-        <title>Sizable Stain</title>
-        <link href="https://fonts.googleapis.com/css?family=Muli|Lato" rel="stylesheet">
-        <link rel="icon" type="image/png" href="/img/favicon.png" />
-        <link rel="stylesheet" href="/css/main.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <div id="page">
-            <div id="header">
-                <div class="container">
-                    <div class="row">
-                        <h1 id="headerHeading"><a id="headerHeadingA" href="/">Sizable Stain</a></h1>
-                    </div>
-                </div>
-            </div>
-            <div id="body"></div>
-            <div id="footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <a href="https://facebook.com/sizablestain" target="_blank">
-                                <img class="footerImg" src="/img/facebook.png">
-                            </a>
-                            <a href="https://instagram.com/sizablestain" target="_blank">
-                                <img class="footerImg imgColorInvert" src="/img/instagram.png">
-                            </a>
-                        </div>
-                        <div class="col-sm-6" align="right">
-                            <p id="footerP">Philadelphia's only PoC-run art publication.</p>
-                        </div>
-                    </div>
+---
+layout: default
+---
+<link rel="stylesheet" href="/css/card.css">
+<div class="container">
+    {% for post in site.posts limit: 1 %}
+    <div id="maincard" class="row">
+        <div class="col-sm-8">
+            <a href="{{ post.url }}"><img id="mainCardImg" class="cardImg" src="{{ post.img }}"></a>
+        </div>
+        <div class="col-sm-4">
+            <h3 class="cardH"><a href="{{ post.url }}" class="postLink">{{ post.title }}</a></h3>
+            <p><span>{{ post.author }}</span>&nbsp;&nbsp;•&nbsp;&nbsp;<span>{{ post.date | date: '%B %d, %Y' }}</span></p>
+            <p class="cardP">{{ post.description }}</p>
+        </div>
+    </div>
+    {% endfor %}
+    <br>
+    <div class="row">
+        {% for post in site.posts offset: 1 limit: 4 %}
+        <div class="col-sm-6 cardContainer">
+            <div class="card">
+                <a href="{{ post.url }}"><img class="cardImg" src="{{ post.img }}"></a>
+                <div class="cardText">
+                    <h3 class="cardH"><a href="{{ post.url }}" class="postLink">{{ post.title }}</a></h3>
+                    <p><span>{{ post.author }}</span>&nbsp;&nbsp;•&nbsp;&nbsp;<span>{{ post.date | date: '%B %d, %Y' }}</span></p>
+                    <p class="cardP">{{ post.description }}</p>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+        {% endfor %}
+    </div>
+    <br>
+    <div class="row" id="viewAllRow">
+        <a id="viewAllButton" href="/articles">View All Articles</a>
+    </div>
+    <br>
+</div>

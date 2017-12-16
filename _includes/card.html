@@ -1,0 +1,10 @@
+<div class="col-sm-6 cardContainer">
+    <div class="card">
+        <a href="{{ include.post.url }}"><img class="cardImg" src="{{ include.post.img }}"></a>
+        <div class="cardText">
+            <h3 class="cardH">{{ include.post.title }}</h3>
+            <p><span>{{ include.post.author }}</span>&nbsp;&nbsp;•&nbsp;&nbsp;<span>{{ include.post.date | date: '%B %d, %Y' }}</span></p>
+            <p class="cardP">{{ include.post.description }}</p>
+        </div>
+    </div>
+</div>

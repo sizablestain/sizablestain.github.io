@@ -9,6 +9,12 @@ h1, h2, h3, h4, h5 {
 	font-family: 'Muli', serif !important;
 }
 
+p {
+	font-family: 'Lato', sans-serif !important;
+	font-size: 11pt;
+	line-height: 16pt;
+}
+
 #page {
 	display: flex;
 	flex-direction: column;
@@ -22,8 +28,8 @@ h1, h2, h3, h4, h5 {
 
 #headerHeading {
 	font-size: 60pt;
-	line-height: 108pt;
-	margin-top: 60pt;
+	line-height: 72pt;
+	margin-top: 48pt;
 }
 
 #headerHeadingA {
@@ -31,8 +37,75 @@ h1, h2, h3, h4, h5 {
 	text-decoration: none;
 }
 
+#navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	background-color: #ff6677;
+	padding-top: 16px;
+}
+
+.navbarFixed {
+	position: fixed;
+	width: 100%;
+	animation-duration: 0.4s;
+  	animation-name: slidedown;
+  	animation-fill-mode: forwards;
+  	z-index: 100;
+}
+
+@keyframes slidedown {
+  from {
+    box-shadow: 0 1em 0 -1em #333333;
+  }
+  to {
+    box-shadow: 0 1.6em 0 -1em #333333;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-top: -2em;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+#navHeader {
+	flex-grow: 1;
+	margin-left: 3.2em;
+	display: none;
+	animation-duration: 1s;
+  	animation-name: slidein;
+  	animation-fill-mode: forwards;
+}
+
+.navItem {
+	margin-right: 3.2em;
+}
+
+.navItemRight {
+	margin-top: 8px;
+}
+
+.navLink {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.navActiveLink, .navLink:hover, .navLink:active {
+	color: #333333;
+	text-decoration: none;
+}
+
 #body {
 	flex: 1;
+	padding-top: 32px;
+}
+
+.bodyNavbarFixed {
+	padding-top: 89px !important;
 }
 
 #footer {
@@ -47,6 +120,8 @@ h1, h2, h3, h4, h5 {
 	height: 24px;
 	margin-left: 4px;
 	margin-right: 8px;
+	margin-top: 2px;
+	margin-bottom: 2px;
 }
 
 .footerImg:hover {
@@ -54,6 +129,8 @@ h1, h2, h3, h4, h5 {
 	height: 28px;
 	margin-left: 2px;
 	margin-right: 6px;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .imgColorInvert {
