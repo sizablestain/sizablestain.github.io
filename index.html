@@ -10,7 +10,7 @@ layout: default
         </div>
         <div class="col-sm-4">
             <h3 class="cardH"><a href="{{ post.url }}" class="postLink">{{ post.title }}</a></h3>
-            <p><small><span>{{ post.author }}</span>&nbsp;&nbsp;•&nbsp;&nbsp;<span>{{ post.date | date: '%B %d, %Y' }}</span></small></p>
+            <p><small><span><a href="/writers" class="postLink">{{ post.author }}</a></span>&nbsp;&nbsp;•&nbsp;&nbsp;<span>{{ post.date | date: '%B %d, %Y' }}</span></small></p>
             <p class="cardP">{{ post.description }}</p>
         </div>
     </div>
@@ -23,7 +23,7 @@ layout: default
                 <a href="{{ post.url }}"><img class="cardImg" src="{{ post.img }}"></a>
                 <div class="cardText">
                     <h3 class="cardH"><a href="{{ post.url }}" class="postLink">{{ post.title }}</a></h3>
-                    <p><small><span>{{ post.author }}</span>&nbsp;&nbsp;•&nbsp;&nbsp;<span>{{ post.date | date: '%B %d, %Y' }}</span></small></p>
+                    <p><small><span><a href="/writers" class="postLink">{{ post.author }}</a></span>&nbsp;&nbsp;•&nbsp;&nbsp;<span>{{ post.date | date: '%B %d, %Y' }}</span></small></p>
                     <p class="cardP">{{ post.description }}</p>
                 </div>
             </div>

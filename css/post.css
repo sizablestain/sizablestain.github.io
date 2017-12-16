@@ -9,3 +9,13 @@
 	padding-top: 16px;
 	padding-bottom: 16px;
 }
+
+.postLink {
+	color: #333333;
+	text-decoration: none;
+}
+
+.postLink:hover, .postLink:active {
+	color: #333333;
+	text-decoration: underline;
+}
