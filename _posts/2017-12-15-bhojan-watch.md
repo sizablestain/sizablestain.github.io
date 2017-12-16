@@ -5,6 +5,7 @@ date: 2017-12-15
 img: "/img/me.png"
 description: "Bhojan Watch is a multimedia experiment in eating."
 author: "Shreshth Khilani"
+authorUrl: "/writers"
 ---
 
 Bhojan Watch is a multimedia experiment in eating.

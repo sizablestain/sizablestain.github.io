@@ -4,7 +4,7 @@ layout: default
 <link rel="stylesheet" href="/css/post.css">
 <div class="container">
     <h2>{{ page.title }}</h2>
-    <p><span><a href="/writers" class="postLink">{{ page.author }}</a></span>&nbsp;&nbsp;•&nbsp;&nbsp;<span>{{ page.date | date: '%B %d, %Y' }}</span></p>
+    <p><span><a href="{{ page.authorUrl }}" class="postLink">{{ page.author }}</a></span>&nbsp;&nbsp;•&nbsp;&nbsp;<span>{{ page.date | date: '%B %d, %Y' }}</span></p>
     <img src="{% if page.img %}{{ page.img }}{% endif %}" id="postimg">
     <div class="row">
         <div class="col-sm-8">
