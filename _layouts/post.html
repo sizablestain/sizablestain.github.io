@@ -6,7 +6,12 @@ layout: default
     <h2>{{ page.title }}</h2>
     <p><span>{{ page.author }}</span>&nbsp;&nbsp;•&nbsp;&nbsp;<span>{{ page.date | date: '%B %d, %Y' }}</span></p>
     <img src="{% if page.img %}{{ page.img }}{% endif %}" id="postimg">
-    <div id="posttxt">
-        {{ content }}
+    <div class="row">
+        <div class="col-sm-8">
+            <div id="posttxt">
+                {{ content }}
+            </div>
+        </div>
+        <div class="col-sm-4"></div>
     </div>
 </div>

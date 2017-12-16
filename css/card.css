@@ -1,10 +1,9 @@
-#maincard, .card {
+#maincard, .othercard {
 	background-color: #333333;
 	color: #ffffff;
 	width: 100%;
-	border: none;
 	margin: 0;
-	border-radius: 0;
+	box-shadow: 0 1.6em 0 -1em #777777;
 }
 
 .cardContainer {
