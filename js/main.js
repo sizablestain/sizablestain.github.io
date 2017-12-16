@@ -1,4 +1,11 @@
-$(window).on('load', function() {
+$(document).ready(function() {
+    if (window.location.pathname === '/articles/') {
+        $('#articlesLink').addClass('navActiveLink');
+    } else if (window.location.pathname === '/writers/') {
+        $('#writersLink').addClass('navActiveLink');
+    } else if (window.location.pathname === '/about/') {
+        $('#aboutLink').addClass('navActiveLink');
+    }
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
         if (scroll >= $('#header').offset().top + $('#header').height()) {
@@ -11,14 +18,4 @@ $(window).on('load', function() {
             $('#body').removeClass('bodyNavbarFixed');
         }
     });
-});
-
-$(document).ready(function() {
-    if (window.location.pathname === '/articles/') {
-        $('#articlesLink').addClass('navActiveLink');
-    } else if (window.location.pathname === '/writers/') {
-        $('#writersLink').addClass('navActiveLink');
-    } else if (window.location.pathname === '/about/') {
-        $('#aboutLink').addClass('navActiveLink');
-    }
 });
