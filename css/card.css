@@ -54,11 +54,11 @@
 }
 
 .postLink {
-	color: #ffffff;
+	color: inherit;
 	text-decoration: none;
 }
 
 .postLink:hover, .postLink:active {
-	color: #ffffff;
+	color: inherit;
 	text-decoration: underline;
 }

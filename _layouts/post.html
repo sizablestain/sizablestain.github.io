@@ -2,6 +2,7 @@
 layout: default
 ---
 <link rel="stylesheet" href="/css/post.css">
+<link rel="stylesheet" href="/css/card.css">
 <div class="container">
     <h2>{{ page.title }}</h2>
     <p><span><a href="{{ page.authorUrl }}" class="postLink">{{ page.author }}</a></span>&nbsp;&nbsp;•&nbsp;&nbsp;<span>{{ page.date | date: '%B %d, %Y' }}</span></p>
@@ -12,6 +13,8 @@ layout: default
                 {{ content }}
             </div>
         </div>
-        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            {% include popular.html %}
+        </div>
     </div>
 </div>

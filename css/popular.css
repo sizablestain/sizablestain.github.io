@@ -1,0 +1,12 @@
+.popularHeader {
+	background-color: #ff6677;
+	color: #ffffff;
+	padding-top: 8px;
+	padding-bottom: 4px;
+	padding-left: 16px;
+}
+
+.popularPost {
+	border: solid 1px #777777;
+	margin-bottom: 16px;
+}
