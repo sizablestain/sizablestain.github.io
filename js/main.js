@@ -10,10 +10,13 @@ $(document).ready(function() {
         var scroll = $(window).scrollTop();
         if (scroll >= $('#header').offset().top + $('#header').height()) {
             $('#navHeader').show();
+            $('#navHeader').addClass('navHeaderShow');
+            $('#navHeader').removeClass('navHeaderHide');
             $('#navbar').addClass('navbarFixed');
             $('#body').addClass('bodyNavbarFixed');
         } else {
-            $('#navHeader').hide();
+            $('#navHeader').removeClass('navHeaderShow');
+            $('#navHeader').addClass('navHeaderHide');
             $('#navbar').removeClass('navbarFixed');
             $('#body').removeClass('bodyNavbarFixed');
         }

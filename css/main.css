@@ -52,6 +52,7 @@ p {
   	animation-name: slidedown;
   	animation-fill-mode: forwards;
   	z-index: 100;
+  	overflow: hidden;
 }
 
 @keyframes slidedown {
@@ -72,6 +73,17 @@ p {
   }
 }
 
+@keyframes slideout {
+  from {
+    margin-top: 0;
+    opacity: 1;
+  }
+  to {
+    margin-top: -2em;
+    opacity: 0;
+  }
+}
+
 .boxshadow {
 	box-shadow: 0 1.6em 0 -1em #777777;
 }
@@ -80,8 +92,17 @@ p {
 	flex-grow: 1;
 	margin-left: 3.2em;
 	display: none;
+}
+
+.navHeaderShow {
 	animation-duration: 1s;
   	animation-name: slidein;
+  	animation-fill-mode: forwards;
+}
+
+.navHeaderHide {
+	animation-duration: 0.2s;
+  	animation-name: slideout;
   	animation-fill-mode: forwards;
 }
 

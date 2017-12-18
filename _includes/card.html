@@ -1,10 +1,39 @@
-<div class="col-sm-6 cardContainer">
-    <div class="card">
-        <a href="{{ include.post.url }}"><img class="cardImg" src="{{ include.post.img }}"></a>
-        <div class="cardText">
-            <h3 class="cardH">{{ include.post.title }}</h3>
-            <p><span>{{ include.post.author }}</span>&nbsp;&nbsp;•&nbsp;&nbsp;<span>{{ include.post.date | date: '%B %d, %Y' }}</span></p>
-            <p class="cardP">{{ include.post.description }}</p>
-        </div>
+<!--
+    This component generates a card with post details.
+    Arguments:
+        - isVertical 
+        - postUrl
+        - postImg
+        - postTitle
+        - postAuthor
+        - postAuthorUrl
+        - postDate
+        - postDescription
+        - showDescription
+-->
+
+<link rel="stylesheet" href="/css/card.css">
+
+{% if include.isVertical %}
+<div class="postcard boxshadow">
+    <a href="{{ include.postUrl }}"><img class="cardImg" src="{{ include.postImg }}"></a>
+    <div class="cardText">
+        <h3 class="cardH"><a href="{{ include.postUrl }}" class="postLink">{{ include.postTitle }}</a></h3>
+        <p><small><span><a href="{{ include.postAuthorUrl }}" class="postLink">{{ include.postAuthor }}</a></span>&nbsp;&nbsp;•&nbsp;&nbsp;<span>{{ include.postDate | date: '%B %d, %Y' }}</span></small></p>
+        {% if include.showDescription %}
+        <p class="cardP">{{ post.description }}</p>
+        {% endif %}
     </div>
 </div>
+{% else %}
+<div class="postcard boxshadow row">
+    <div class="col-sm-8">
+        <a href="{{ include.postUrl }}"><img id="mainCardImg" class="cardImg" src="{{ include.postImg }}"></a>
+    </div>
+    <div class="col-sm-4">
+        <h3 class="cardH"><a href="{{ include.postUrl }}" class="postLink">{{ include.postTitle }}</a></h3>
+        <p><small><span><a href="{{ include.postAuthorUrl }}" class="postLink">{{ include.postAuthor }}</a></span>&nbsp;&nbsp;•&nbsp;&nbsp;<span>{{ include.postDate | date: '%B %d, %Y' }}</span></small></p>
+        <p class="cardP">{{ include.postDescription }}</p>
+    </div>
+</div>
+{% endif %}

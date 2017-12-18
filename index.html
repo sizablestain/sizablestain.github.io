@@ -2,33 +2,35 @@
 layout: default
 title: "Sizable Stain"
 ---
-<link rel="stylesheet" href="/css/card.css">
 <div class="container">
     {% for post in site.posts limit: 1 %}
-    <div id="maincard" class="row">
-        <div class="col-sm-8">
-            <a href="{{ post.url }}"><img id="mainCardImg" class="cardImg" src="{{ post.img }}"></a>
-        </div>
-        <div class="col-sm-4">
-            <h3 class="cardH"><a href="{{ post.url }}" class="postLink">{{ post.title }}</a></h3>
-            <p><small><span><a href="{{ post.authorUrl }}" class="postLink">{{ post.author }}</a></span>&nbsp;&nbsp;•&nbsp;&nbsp;<span>{{ post.date | date: '%B %d, %Y' }}</span></small></p>
-            <p class="cardP">{{ post.description }}</p>
-        </div>
-    </div>
+        {% include card.html
+            isVertical=false
+            postUrl=post.url
+            postTitle=post.title
+            postImg=post.img
+            postAuthor=post.author
+            postAuthorUrl=post.authorUrl
+            postDate=post.date
+            showDescription=true
+            postDescription=post.description
+        %}
     {% endfor %}
-    <br>
     <div class="row">
         {% for post in site.posts offset: 1 limit: 4 %}
-        <div class="col-sm-6 cardContainer">
-            <div class="othercard">
-                <a href="{{ post.url }}"><img class="cardImg" src="{{ post.img }}"></a>
-                <div class="cardText">
-                    <h3 class="cardH"><a href="{{ post.url }}" class="postLink">{{ post.title }}</a></h3>
-                    <p><small><span><a href="{{ post.authorUrl }}" class="postLink">{{ post.author }}</a></span>&nbsp;&nbsp;•&nbsp;&nbsp;<span>{{ post.date | date: '%B %d, %Y' }}</span></small></p>
-                    <p class="cardP">{{ post.description }}</p>
-                </div>
+            <div class="col-sm-6">
+                {% include card.html
+                    isVertical=true
+                    postUrl=post.url
+                    postTitle=post.title
+                    postImg=post.img
+                    postAuthor=post.author
+                    postAuthorUrl=post.authorUrl
+                    postDate=post.date
+                    showDescription=true
+                    postDescription=post.description
+                %}
             </div>
-        </div>
         {% endfor %}
     </div>
     <br>

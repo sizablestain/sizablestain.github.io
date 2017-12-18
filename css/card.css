@@ -1,12 +1,8 @@
-#maincard, .othercard {
+.postcard {
 	background-color: #333333;
 	color: #ffffff;
 	width: 100%;
 	margin: 0;
-	box-shadow: 0 1.6em 0 -1em #777777;
-}
-
-.cardContainer {
 	margin-bottom: 16px;
 }
 
